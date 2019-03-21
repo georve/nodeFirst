@@ -1,0 +1,24 @@
+{
+  "name": "cursonpm",
+  "version": "1.0.0",
+  "description": "Primera proyecto de npm con option y git",
+  "main": "tarea.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georve/nodeFirst.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Georman Calderon georve@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georve/nodeFirst/issues"
+  },
+  "homepage": "https://github.com/georve/nodeFirst#readme"
+}
