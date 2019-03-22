@@ -1,6 +1,8 @@
 
 const datos = require('./cursos');
 const fs = require('fs');
+const express=require('express');
+const app=express();
 const options = {
    id: {
       demand: true,
@@ -15,8 +17,21 @@ const options = {
       alias: 'c'
    }
 };
+
+let saveDataHtml=(materia,name,ci)=>{
+  htmltext='<b>El estudiante '+ name + 'con cedula '+ ci + ' Se ha matriculado en el curso:</b> <br>'+
+           '<p> Id:'+ materia.id+'<br>'+'Nombre: '+ materia.nombre+'<br>'+'Duracion: '+ materia.duracion+'<br>'+'Valor '+ materia.valor+'<br>'
+            '</p>';
+
+  app.get('/',function(req,resp){
+     resp.send(htmltext);
+  });
+
+   app.listen(3000);
+   
+}
 let saveDataFile = (materia, name, ci) => {
-   texto = 'El estudiante ' + name + 'con cedula ' + ci + ' se ha matriculado en el curso llamado ' + materia.nombre;
+   texto = 'El estudiante ' + name + ' con cedula ' + ci + ' se ha matriculado en el curso llamado ' + materia.nombre;
 
    fs.writeFile('inscripcion.txt', texto, (err) => {
       if (err) throw (err);
@@ -47,7 +62,7 @@ if (!argv.id) {
 
    if (materia) {
       datos.showSubjectQuick(materia);
-      saveDataFile(materia, argv.nombre, argv.cedula);
+      saveDataHtml(materia, argv.nombre, argv.cedula);
    } else {
       console.log('El Id proporcionado no esta registrado');
       for (var i = 0; i < datos.materias.length; i++) {
