@@ -22,6 +22,9 @@ Missing required arguments: id, nombre, cedula
 
 3. seleccionar una materia: node tarea inscribir -i=2 -n=georman -c=13951032
    se debe generar un mensaje indicando que se inscribio en uno de los cursos.
-   sino encuentra el curso debe aparecer un mensaje de error u las opciones
+   sino encuentra el curso debe aparecer un mensaje de error u las opciones.
+
+4. Si el curso se inscribe de manera correcta se debe mostrar la informacion en
+   la pagina http://localhost:3000
 
 
