@@ -2,18 +2,18 @@
 let materias=[
   {'id':1,
    'nombre':'Literatura',
-   'duracion':16,
-   'valor':4
+   'duracion':'16 Horas',
+   'valor':'4 Creditos'
    },
    {'id':2,
    'nombre':'Ingles',
-   'duracion':12,
-   'valor':6
+   'duracion':'12 Horas',
+   'valor':'6 Creditos'
    },
    {'id':3,
    'nombre':'Historia',
-   'duracion':10,
-   'valor':9
+   'duracion':'10 Horas',
+   'valor':'9 Creditos'
    },
   ];
 
